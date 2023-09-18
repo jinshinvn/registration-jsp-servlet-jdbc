@@ -59,7 +59,9 @@ public class EmployeeServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employeereg.jsp");
+//		response.sendRedirect(request.getContextPath() + "/employeedetail.jsp");
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employeedetail.jsp");
 		dispatcher.forward(request, response);
 		
 //		doGet(request, response);
