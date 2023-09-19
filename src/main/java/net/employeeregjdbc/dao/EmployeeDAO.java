@@ -22,14 +22,10 @@ public class EmployeeDAO {
 		try (Connection connection = DriverManager
 			.getConnection("jdbc:mysql://localhost:3306/j2ee_registration_employee_jdbc", "root", ""); 
 			PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
-//				preparedStatement.setString(1,  employee.getName());
-//				preparedStatement.setString(2,  employee.getUsername());
-//				preparedStatement.setString(3,  employee.getPassword());
-//				preparedStatement.setString(4,  employee.getNote());
-				preparedStatement.setString(1, 	"fuck");
-				preparedStatement.setString(2, 	"fuck");
-				preparedStatement.setString(3, 	"fuck");
-				preparedStatement.setString(4,  "fuck");
+				preparedStatement.setString(1,  employee.getName());
+				preparedStatement.setString(2,  employee.getUsername());
+				preparedStatement.setString(3,  employee.getPassword());
+				preparedStatement.setString(4,  employee.getNote());
 				System.out.println(preparedStatement);
 				
 				result = preparedStatement.executeUpdate();
